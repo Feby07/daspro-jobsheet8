@@ -4,25 +4,25 @@ public class PersegiAngka07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int i,j,N;
-
-        System.out.print("Masukkan nilai N (Minimal 3): ");
-        N = sc.nextInt();
+        System.out.print("Masukkan nilai N (minimal 3): ");
+        int N = sc.nextInt();
 
         if (N < 3) {
-            System.out.print("Nilai harus minimal 3");
-        } 
-
-        for (i=1; i<=N; i++) {
-            for (j=1; j<=N; j++) {
-                if (i == 1 || i == N || j == 1 || j == N || (i == j && i !=1 && i !=N)) {
-                    System.out.print(N + " ");
+            System.out.println("Nilai N minimal 3.");
+            return;
+        }
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                // Cek jika berada di baris atau kolom tepi
+                if (i == 0 || i == N - 1 || j == 0 || j == N - 1) {
+                    System.out.printf("%d ", N);  
                 } else {
-                    System.out.print("   ");
+                    System.out.printf("  ");  
                 }
             }
             System.out.println();
         }
-        
+
+        sc.close();
     }
 }
