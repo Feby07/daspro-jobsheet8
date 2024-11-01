@@ -9,11 +9,10 @@ public class PersegiAngka07 {
 
         if (N < 3) {
             System.out.println("Nilai N minimal 3.");
-            return;
         }
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                // Cek jika berada di baris atau kolom tepi
+                
                 if (i == 0 || i == N - 1 || j == 0 || j == N - 1) {
                     System.out.printf("%d ", N);  
                 } else {
